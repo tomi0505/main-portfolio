@@ -1,0 +1,20 @@
+@mixin margin-auto() {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@mixin flex($justify-content: center, $align-items: center) {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: $justify-content;
+  align-items: $align-items;
+}
+
+
+
+// NORMALIZE_RESET
+@mixin ul-reset() {
+  ul {
+    padding-left: 0;
+  }
+}

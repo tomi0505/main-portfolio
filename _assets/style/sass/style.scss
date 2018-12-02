@@ -1,0 +1,36 @@
+@import 'var.scss';
+@import 'mixin.scss';
+@import 'basic.scss';
+
+body {
+  background-color: $primary-color;
+  text-align: center;
+}
+
+.portfolio {
+  margin: 50px auto;
+  max-width: 1200px;
+  min-height: 400px;
+  background-color: $white;
+
+  nav {
+    background-color: $primary-color;
+  }
+
+  &__menu {
+    margin: 0;
+    padding-left: 0;
+    @include flex(flex-start);
+
+    li {
+      padding: 12px;
+      list-style-type: none;
+      background-color: $white;
+    }
+  }
+
+  // MAIN
+  .portfolio__subtitle {
+    display: block;
+  }
+}
