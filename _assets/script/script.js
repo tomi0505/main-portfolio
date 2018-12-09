@@ -1,7 +1,3 @@
-// FOR_SNIPPET
-// mainChilds.forEach(() => {});
-
-
 let mainChilds = document.querySelector(".portfolio__main").children;
 let menu = document.querySelector(".portfolio__menu").children;
 mainChilds = [...mainChilds];
