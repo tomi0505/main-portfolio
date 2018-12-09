@@ -1,3 +1,12 @@
 .hidden {
   display: none;
 }
+
+// THIS PROJECT
+.portfolio {
+  &__main {
+    & > .hidden {
+      display: none;
+    }
+  }
+}
