@@ -10,6 +10,15 @@
   align-items: $align-items;
 }
 
+@mixin font($font-size, $letter-spacing:false) {
+  font-size: $font-size+em;
+  @if $letter-spacing {
+    letter-spacing: $letter-spacing+px;
+  } @else {
+    letter-spacing: normal;
+  }
+}
+
 
 
 // NORMALIZE_RESET

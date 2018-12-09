@@ -1,13 +1,11 @@
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans');
 @import 'var.scss';
 @import 'mixin.scss';
 @import 'basic.scss';
 
-html {
-  font-size: 14px;
-}
-
 body {
   padding: 0 $space-basic;
+  font-family: 'Fira Sans', sans-serif;
   background-color: $primary-color;
   text-align: center;
 }
@@ -28,6 +26,7 @@ body {
 
     li {
       padding: $space-basic;
+      @include font(1);
       list-style-type: none;
       background-color: $white;
 
@@ -50,7 +49,7 @@ body {
   }
 
   &__title {
-    font-size: 1.8em;
+    @include font(1.6);
   }
 
   &__subtitle {
