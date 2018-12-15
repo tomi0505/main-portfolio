@@ -1,5 +1,5 @@
 let mainChilds = document.querySelector(".portfolio__main").children;
-let menu = document.querySelector(".portfolio__menu").children;
+let menu = document.querySelector(".menu").children;
 mainChilds = [...mainChilds];
 menu = [...menu];
 

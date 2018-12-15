@@ -2,7 +2,7 @@
   display: none;
 }
 
-// THIS PROJECT
+// THIS PROJECT, SPECIFIC SELECTORS HELPER
 .portfolio {
   &__main {
     & > .hidden {
@@ -10,3 +10,13 @@
     }
   }
 }
+
+
+// NORMALIZE_RESET
+// ul {
+//   padding-left: 0;
+// }
+
+// address {
+//   font-style: normal;
+// }

@@ -11,19 +11,10 @@
 }
 
 @mixin font($font-size, $letter-spacing:false) {
-  font-size: $font-size+em;
+  font-size: $font-size+rem;
   @if $letter-spacing {
     letter-spacing: $letter-spacing+px;
   } @else {
     letter-spacing: normal;
-  }
-}
-
-
-
-// NORMALIZE_RESET
-@mixin ul-reset() {
-  ul {
-    padding-left: 0;
   }
 }
