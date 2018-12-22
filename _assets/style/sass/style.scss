@@ -44,15 +44,26 @@ body {
   }
 
   &__about-me {
+    max-width: 600px;
+
     p {
       line-height: 30px;
     }
   }
 
   &__skills {
+    max-width: 600px;
+    justify-content: flex-start;
+
     .icon {
       font-size: 3.3em;
     }
+  }
+
+  &__skills-simple {
+    margin-left: 0;
+    margin-right: 0;
+    min-width: 150px;
   }
 
   &__skills-description {
