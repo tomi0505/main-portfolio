@@ -74,6 +74,14 @@ body {
     padding-bottom: 10px;
     justify-content: flex-start;
     max-width: 870px;
+
+    @media(max-width: 917px) {
+      max-width: 580px;
+    }
+
+    @media(max-width: 627px) {
+      justify-content: center;
+    }
   }
 
   &__project-item {
@@ -139,12 +147,12 @@ body {
     list-style-type: none;
     cursor: pointer;
     z-index: 1;
-      
+
     &:hover {
       border-bottom-color: $white;
     }
   }
-    
+
   li.menu__active {
     border-bottom-color: $white;
     z-index: 0;
