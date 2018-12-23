@@ -3,6 +3,12 @@
   margin-right: auto;
 }
 
+@mixin reset($tag) {
+  @if $tag == a {
+    text-decoration: none;
+  }
+}
+
 @mixin flex($justify-content: center, $align-items: center) {
   display: flex;
   flex-wrap: wrap;

@@ -17,7 +17,26 @@ body {
   min-height: 400px;
 
   &__nav {
+    @include flex(space-between);
     background-color: $primary-color;
+  }
+
+  &__social-icons {
+    font-size: 1.1rem;
+  }
+
+  &__social-icons-simple {
+    margin: 13px;
+    @include reset(a);
+    color: $white;
+
+    &:first-of-type {
+      margin-right: 7px;
+    }
+
+    &:last-of-type {
+      margin-left: 0;
+    }
   }
 
   &__main {
@@ -54,6 +73,18 @@ body {
   &__skills {
     max-width: 600px;
     justify-content: flex-start;
+
+    @media(max-width: 647px) {
+      max-width: 450px;
+    }
+
+    @media(max-width: 497px) {
+      max-width: 300px;
+    }
+
+    @media(max-width: 347px) {
+      justify-content: center;
+    }
 
     .icon {
       font-size: 3.3em;
@@ -137,13 +168,13 @@ body {
   @include flex(flex-start);
 
   li {
-    padding: $basic-padding;
+    padding: 0 $basic-padding;
     position: relative;
     @include font(1);
     height: 0;
-    border-right: 30px solid transparent;
-    border-bottom: 30px solid rgba(255,255,255,.7);
-    line-height: 30+($basic-padding*2);
+    border-right: 34px solid transparent;
+    border-bottom: 34px solid rgba(255,255,255,.7);
+    line-height: 34px;
     list-style-type: none;
     cursor: pointer;
     z-index: 1;
