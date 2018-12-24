@@ -1,11 +1,14 @@
-@mixin margin-auto() {
-  margin-left: auto;
-  margin-right: auto;
-}
+@mixin rwd($getBreakpoint) {
+  @if map-has-key($breakpoints, $getBreakpoint) {
+    @media (max-width: #{map-get($breakpoints, $getBreakpoint)}) {
+      @content;
+    }
+  }
 
-@mixin reset($tag) {
-  @if $tag == a {
-    text-decoration: none;
+  @else {
+    @media (max-width: $getBreakpoint) {
+      @content;
+    }
   }
 }
 
@@ -16,11 +19,8 @@
   align-items: $align-items;
 }
 
-@mixin font($font-size, $letter-spacing:false) {
-  font-size: $font-size+rem;
-  @if $letter-spacing {
-    letter-spacing: $letter-spacing+px;
-  } @else {
-    letter-spacing: normal;
+@mixin reset($tag) {
+  @if $tag == a {
+    text-decoration: none;
   }
 }

@@ -1,6 +1,17 @@
+// RWD
+$breakpoints: (
+  small: 450px,
+  phone: 640px,
+  medium: 768px,
+  tablet: 1024px,
+  large: 1200px,
+  xlarge: 1440px
+);
+
+
 $primary-color: yellowgreen;
 $white: #ffffff;
 
 
-// SPACE
+// THE SPACES
 $basic-padding: 12px;
