@@ -1,3 +1,3 @@
-function testX() {return "nic"};
+const testX = "xyz";
 
-export default testX;
+export {testX};

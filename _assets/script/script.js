@@ -1,3 +1,7 @@
+import {testX} from "./modules/keyCodeTab.js";
+console.log(testX);
+
+
 let mainChilds = document.querySelector(".portfolio__main").children;
 let menu = document.querySelector(".menu").children;
 mainChilds = [...mainChilds];
