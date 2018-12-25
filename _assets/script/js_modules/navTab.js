@@ -1,4 +1,4 @@
-function navTab(domElements, visibleSection) {
+const navTab = function(domElements, visibleSection) {
 	domElements.mainChilds.forEach((sections, i) => {
 	  if (i !== visibleSection) {
 	    sections.classList.add("hidden");

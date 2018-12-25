@@ -1,7 +1,7 @@
 import navTab from './navTab.js';
 import {activeTabs} from './navTabKey.js';
 
-function selectTab(domElements) {
+const selectTab = function(domElements) {
 	let minusMargin = 0;
 
 	domElements.menu.forEach((li, i) => {

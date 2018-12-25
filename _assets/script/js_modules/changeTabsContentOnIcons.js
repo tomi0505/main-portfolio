@@ -1,0 +1,25 @@
+const originalValues = [];
+const newValuseWithIcon = ['home1', 'user1', 'hammer', 'briefcase2', 'email3'];
+const originTemplate = '<i class="icon-{{icon-name}}"></i>';
+
+const saveOriginalValues = function(domElements) {
+	domElements.menu.forEach((li, i)=> {
+		originalValues.push(li.textContent);
+	});
+};
+
+const changeTabsContentOnIcons = function(domElements) {
+	if(window.innerWidth < 768) {
+		domElements.menu.forEach((li, i)=> {
+			const newString = originTemplate.replace('{{icon-name}}', newValuseWithIcon[i]);
+			li.innerHTML = newString;
+		});
+	} else {
+		domElements.menu.forEach((li, i)=> {
+			li.innerHTML = originalValues[i];
+		});
+	}
+};
+
+export default changeTabsContentOnIcons;
+export {saveOriginalValues};

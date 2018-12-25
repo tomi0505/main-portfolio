@@ -14,7 +14,7 @@ const activeTabs = function(domElements) {
   return activeTabIndex;
 }
 
-function navTabKey(domElements) {
+const navTabKey = function(domElements) {
 	document.addEventListener("keyup", function(e) {
 	  if (e.keyCode === 39) {
 	    if (activeTabNr >= 0 && activeTabNr < (domElements.menu.length-1)) {
