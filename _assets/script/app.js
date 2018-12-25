@@ -1,5 +1,6 @@
 import navTab from './js_modules/navTab.js';
 import selectTab from './js_modules/selectTab.js';
+import navTabKey from './js_modules/navTabKey.js';
 
 
 document.addEventListener("DOMContentLoaded", function() {
@@ -15,4 +16,5 @@ document.addEventListener("DOMContentLoaded", function() {
 
 	navTab(domElements, 0);
 	selectTab(domElements);
+	navTabKey(domElements);
 }, false);

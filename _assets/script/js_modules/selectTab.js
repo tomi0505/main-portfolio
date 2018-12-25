@@ -1,4 +1,5 @@
 import navTab from './navTab.js';
+import {activeTabs} from './navTabKey.js';
 
 function selectTab(domElements) {
 	let minusMargin = 0;
@@ -13,7 +14,7 @@ function selectTab(domElements) {
 	    });
 	    this.classList.add("menu__active");
 	    navTab(domElements, domElements.menu.indexOf(this));
-	    // activeTabs();
+	    activeTabs(domElements);
 	  }, false);
 	});
 }
