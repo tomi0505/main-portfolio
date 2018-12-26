@@ -1,5 +1,5 @@
 const originalValues = [];
-const newValuseWithIcon = ['home1', 'user1', 'hammer', 'briefcase2', 'email3'];
+const newValuseWithIcon = ['home1', 'user1', 'tools', 'suitcase1', 'contact5'];
 const originTemplate = '<i class="icon-{{icon-name}}"></i>';
 
 const saveOriginalValues = function(domElements) {
