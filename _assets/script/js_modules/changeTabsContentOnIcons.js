@@ -9,7 +9,7 @@ const saveOriginalValues = function(domElements) {
 };
 
 const changeTabsContentOnIcons = function(domElements) {
-	if(window.innerWidth < 768) {
+	if(window.innerWidth <= 768) {
 		domElements.menu.forEach((li, i)=> {
 			const newString = originTemplate.replace('{{icon-name}}', newValuseWithIcon[i]);
 			li.innerHTML = newString;

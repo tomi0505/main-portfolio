@@ -2,6 +2,10 @@
   display: none;
 }
 
+.minusLeft {
+	left: -12px;
+}
+
 // THIS PROJECT, SPECIFIC SELECTORS HELPER
 .portfolio {
   &__main {

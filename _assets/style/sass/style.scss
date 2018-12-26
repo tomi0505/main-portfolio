@@ -4,12 +4,22 @@
 @import 'basic.scss';
 @import 'helpers.scss';
 
+html {
+  @include rwd(medium) {
+    font-size: 15px;
+  }
+
+  @include rwd(small) {
+    font-size: 14px;
+  }
+}
+
 body {
   padding: 0 $basic-padding;
   font-family: 'Fira Sans', sans-serif;
   background-color: $primary-color;
   text-align: center;
-  overflow: hidden;
+  overflow: auto;
 
   @include rwd(medium) {
     padding: 0;
@@ -37,6 +47,10 @@ body {
 
     &:first-of-type {
       margin-right: 7px;
+
+      @include rwd(small) {
+       margin-left: 0; 
+      }
     }
 
     &:last-of-type {
@@ -172,7 +186,7 @@ body {
   padding-left: 0;
   @include flex(flex-start);
 
-  li {
+  &__minusLeft {
     padding: 0 $basic-padding;
     position: relative;
     height: 0;
@@ -182,6 +196,39 @@ body {
     list-style-type: none;
     cursor: pointer;
     z-index: 1;
+
+    @for $i from 1 through 5 {
+      &:nth-child(#{$i}) {
+        left: -#{($i*12)-12}px;
+      }
+    }
+
+    @include rwd(medium) {
+      font-size: 1.2rem;
+      border-right-width: 30px;
+    }
+
+    @include rwd(small) {
+      border-right-width: 28px;
+    }
+
+    @include rwd(395px) {
+      padding-left: 9px;
+      padding-right: 9px;
+      border-right-width: 26px;
+
+      @for $i from 1 through 5 {
+        &:nth-child(#{$i}) {
+          left: -#{($i*6)-6}px;
+        }
+      }
+    }
+
+    @include rwd(355px) {
+      padding-left: 9px;
+      padding-right: 9px;
+      border-right-width: 19px;
+    }
 
     &:hover {
       border-bottom-color: $white;
