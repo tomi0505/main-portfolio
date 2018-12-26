@@ -49,7 +49,7 @@ body {
       margin-right: 7px;
 
       @include rwd(small) {
-       margin-left: 0; 
+       margin-left: 0;
       }
     }
 
@@ -90,19 +90,27 @@ body {
   }
 
   &__skills {
-    max-width: 600px;
+    max-width: 600px+$scrollBarWidth;
+    max-height: 354px;
     justify-content: flex-start;
+    overflow: auto;
 
-    @media(max-width: 647px) {
+    @include rwd(647px) {
+      max-height: 336px;
+    }
+
+    @include rwd(647px) {
       max-width: 450px;
     }
 
-    @media(max-width: 497px) {
+    @include rwd(497px) {
       max-width: 300px;
+      max-height: 560px;
     }
 
-    @media(max-width: 347px) {
+    @include rwd(323px) {
       justify-content: center;
+      max-height: 530px;
     }
 
     .icon {
@@ -123,14 +131,18 @@ body {
   &__projects {
     padding-bottom: 10px;
     justify-content: flex-start;
-    max-width: 870px;
+    max-width: 870px+$scrollBarWidth;
+    max-height: 470px;
+    overflow: auto;
 
-    @media(max-width: 917px) {
+    @include rwd(917px) {
       max-width: 580px;
+      max-height: 705px;
     }
 
-    @media(max-width: 627px) {
+    @include rwd(603px) {
       justify-content: center;
+      max-height: 940px;
     }
   }
 
