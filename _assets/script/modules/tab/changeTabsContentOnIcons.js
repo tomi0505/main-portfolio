@@ -1,6 +1,6 @@
 const originalValues = [];
 const newValuseWithIcon = ['home1', 'user1', 'tools', 'suitcase1', 'contact5'];
-const originTemplate = '<i class="icon-{{icon-name}}"></i>';
+const originTemplate = '<i class="icon-{{icon-name}} icon"></i>';
 
 const saveOriginalValues = function(domElements) {
 	domElements.menu.forEach((li, i)=> {

@@ -245,6 +245,13 @@ body {
     &:hover {
       border-bottom-color: $white;
     }
+
+    &--marginTopCentering {
+      .icon {
+        margin-top: 7px;
+        display: inline-block;
+      }
+    }
   }
 
   li.menu__active {
