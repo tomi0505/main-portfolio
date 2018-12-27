@@ -8,7 +8,7 @@ const navTab = function(domElements, visibleSection) {
 	    sections.classList.remove("hidden");
 	  }
 	});
-	// setCookie(visibleSection);
+	setCookie(visibleSection);
 }
 
 export default navTab;
