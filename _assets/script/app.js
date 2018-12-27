@@ -4,6 +4,7 @@ import navTabKey from './modules/tab/navTabKey.js';
 import changeTabsContentOnIcons from './modules/tab/changeTabsContentOnIcons.js';
 import {saveOriginalValues} from './modules/tab/changeTabsContentOnIcons.js';
 import hideInactiveProjectsLink from './modules/portfolio/hideInactiveProjectsLink.js';
+import {getCookie} from './modules/cookie/cookie.js';
 
 document.addEventListener("DOMContentLoaded", function() {
 	let mainChilds = document.querySelector(".portfolio__main").children;
@@ -16,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		mainChilds
 	};
 
-	navTab(domElements, 0);
+	navTab(domElements, getCookie());
 	selectTab(domElements);
 	navTabKey(domElements);
 	saveOriginalValues(domElements);
