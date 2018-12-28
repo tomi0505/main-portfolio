@@ -153,14 +153,19 @@ body {
     max-height: 200px;
     overflow: hidden;
 
-    img {
-      width: 100%;
-      height: 200px;
+    &:hover .portfolio__img-item {
+      transform: scale(1.1);
     }
 
     &:hover .portfolio__project-description {
       @include flex();
     }
+  }
+
+  &__img-item {
+    width: 100%;
+    height: 200px;
+    transition: transform .8s;
   }
 
   &__project-description {
