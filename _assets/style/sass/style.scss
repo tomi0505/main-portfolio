@@ -17,12 +17,23 @@ html {
 body {
   padding: 0 $basic-padding;
   font-family: 'Fira Sans', sans-serif;
-  background-color: $primary-color;
   text-align: center;
+  background-image: $gradient9;
   overflow: auto;
 
   @include rwd(medium) {
     padding: 0;
+  }
+}
+
+.self-photo-item {
+  margin: 12px auto;
+  display: block;
+  width: 90px;
+  border-radius: 50%;
+
+  @include rwd(medium) {
+    width: 80px;
   }
 }
 
@@ -33,7 +44,6 @@ body {
 
   &__nav {
     @include flex(space-between);
-    background-color: $primary-color;
   }
 
   &__social-icons {
@@ -72,13 +82,22 @@ body {
   }
 
   &__title {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
+  }
+
+  &__self-presentation {
+    margin: 0;
+  }
+
+  &__full-name {
+    letter-spacing: 1px;
   }
 
   &__subtitle {
-    margin-top: $basic-padding;
+    margin-top: 8px;
     display: block;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
+    font-style: italic;
   }
 
   &__about-me {
