@@ -26,6 +26,29 @@ body {
   }
 }
 
+.preloader {
+  position: absolute;
+  top: 0;
+  left: 0;
+  @include flex();
+  width: 100%;
+  height: 100%;
+  background-color: $white;
+  z-index: 1000;
+
+  &__dots-container {
+    @include flex(space-between);
+    width: 67px;
+  }
+
+  &__dot-item {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: blue;
+  }
+}
+
 .portfolio {
   margin: 70px auto;
   max-width: 1200px;
