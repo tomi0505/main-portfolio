@@ -26,17 +26,6 @@ body {
   }
 }
 
-.self-photo-item {
-  margin: 12px auto;
-  display: block;
-  width: 90px;
-  border-radius: 50%;
-
-  @include rwd(medium) {
-    width: 80px;
-  }
-}
-
 .portfolio {
   margin: 70px auto;
   max-width: 1200px;
@@ -281,6 +270,17 @@ body {
   li.menu__active {
     border-bottom-color: $white;
     z-index: 0;
+  }
+}
+
+.self-photo-item {
+  margin: 12px auto;
+  display: block;
+  width: 90px;
+  border-radius: 50%;
+
+  @include rwd(medium) {
+    width: 80px;
   }
 }
 

@@ -17,6 +17,8 @@ document.addEventListener("DOMContentLoaded", function() {
 		mainChilds
 	};
 
+	const preloader = document.querySelector(".preloader");
+
 	navTab(domElements, getCookie());
 	selectTab(domElements);
 	navTabKey(domElements);
@@ -27,4 +29,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	window.addEventListener("resize", function() {
 		changeTabsContentOnIcons(domElements);
 	}, false);
+
+	// preloader.classList.add("hidden");
+
 }, false);
