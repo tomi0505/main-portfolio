@@ -11,13 +11,13 @@ document.addEventListener("DOMContentLoaded", function() {
 	let menu = document.querySelector(".menu").children;
 	mainChilds = [...mainChilds];
 	menu = [...menu];
+	
+	const preloader = document.querySelector(".preloader");
 
 	const domElements = {
 		menu,
 		mainChilds
 	};
-
-	const preloader = document.querySelector(".preloader");
 
 	navTab(domElements, getCookie());
 	selectTab(domElements);
@@ -30,6 +30,5 @@ document.addEventListener("DOMContentLoaded", function() {
 		changeTabsContentOnIcons(domElements);
 	}, false);
 
-	// preloader.classList.add("hidden");
-
+	preloader.classList.add("hidden");
 }, false);
