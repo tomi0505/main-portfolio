@@ -334,6 +334,31 @@ body {
   font-style: normal;
 }
 
+.cookie-alert {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  @include flex();
+  font-size: 0.8rem;
+  background-color: #FFFF33;
+  z-index: 999;
+
+  &__information {
+    margin: 0;
+    font-weight: normal;
+  }
+
+  &__accept {
+    margin: 12px;
+    @include reset(a);
+  }
+
+  &__escape {
+    @include reset(a);
+  }
+}
+
 @keyframes changePreloaderBgColor {
   0% {transform: scale(.3);}
   100% {transform: scale(1);}
