@@ -10,7 +10,11 @@ const getCookie = function(name) {
             const cookieName = cookies[i].split("=")[0];
             const cookieVal = cookies[i].split("=")[1];
             if (cookieName === name) {
-                return cookieVal;
+                if(Number(cookieVal) || Number(cookieVal) === 0) {
+                    return Number(cookieVal);
+                } else {
+                    return cookieVal;
+                }
             }
         }
     } else {

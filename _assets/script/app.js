@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		mainChilds
 	};
 
-	navTab(domElements, getCookie());
+	navTab(domElements, getCookie("activeTab"));
 	selectTab(domElements);
 	navTabKey(domElements);
 	saveOriginalValues(domElements);

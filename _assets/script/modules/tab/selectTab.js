@@ -9,7 +9,7 @@ const selectTab = function(domElements) {
 	let minusMargin = 0;
 
 	domElements.menu.forEach((li, i) => {
-	  domElements.menu[getCookie()].classList.add("menu__active");
+	  domElements.menu[getCookie("activeTab")].classList.add("menu__active");
 	  li.addEventListener("click", function() {
 	  	activeIndexTab = domElements.menu.indexOf(this);
 	  	setCookie(activeIndexTab);
