@@ -15,6 +15,14 @@
   }
 }
 
-.preloader.hidden {
-	display: none;
+.preloader {
+	&.hidden {
+		display: none;
+
+		.preloader__dots-container {
+			.preloader__dot-item {
+				animation-play-state: paused;
+			}
+		}
+	}
 }

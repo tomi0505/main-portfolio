@@ -18,34 +18,11 @@ body {
   padding: 0 $basic-padding;
   font-family: 'Fira Sans', sans-serif;
   text-align: center;
-  background-image: $gradient9;
+  background-image: linear-gradient(to right, $gradient9);
   overflow: auto;
 
   @include rwd(medium) {
     padding: 0;
-  }
-}
-
-.preloader {
-  position: absolute;
-  top: 0;
-  left: 0;
-  @include flex();
-  width: 100%;
-  height: 100%;
-  background-color: $white;
-  z-index: 1000;
-
-  &__dots-container {
-    @include flex(space-between);
-    width: 67px;
-  }
-
-  &__dot-item {
-    width: 15px;
-    height: 15px;
-    border-radius: 50%;
-    background-color: blue;
   }
 }
 
@@ -229,6 +206,51 @@ body {
   }
 }
 
+.preloader {
+  position: absolute;
+  top: 0;
+  left: 0;
+  @include flex();
+  width: 100%;
+  height: 100%;
+  background-color: $white;
+  z-index: 1000;
+
+  &__dots-container {
+    @include flex(space-between);
+    width: 67px;
+
+    @include rwd(phone) {
+      width: 55px;
+    }
+  }
+
+  &__dot-item {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: $favouriteBlueColor;
+    animation: changePreloaderBgColor .4s infinite alternate;
+
+    @include rwd(phone) {
+      width: 11px;
+      height: 11px;
+    }
+
+    &:nth-child(1) {
+      animation-delay: -0.8s;
+    }
+
+    &:nth-child(2) {
+      animation-delay: -0.4s;
+    }
+
+    &:nth-child(3) {
+      animation-delay: -0.2s;
+    }
+  }
+}
+
 .menu {
   margin: 0;
   padding-left: 0;
@@ -309,4 +331,9 @@ body {
 
 .contact-data {
   font-style: normal;
+}
+
+@keyframes changePreloaderBgColor {
+  0% {transform: scale(.3);}
+  100% {transform: scale(1);}
 }

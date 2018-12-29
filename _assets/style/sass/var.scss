@@ -12,22 +12,24 @@ $breakpoints: (
 $scrollBarWidth: 17px;
 
 // COLORS
-$primary-color: yellowgreen;
+$black: #000000;
 $white: #ffffff;
+$primary-color: yellowgreen;
+$favouriteBlueColor: #4a6da7;
 
 // GRADIENTS
-$gradient0: linear-gradient(to right, #c04848, #480048);
-$gradient1: linear-gradient(to right, #4389a2, #4389a2);
-$gradient2: linear-gradient(to right, #314755, #26a0da);
-$gradient3: linear-gradient(to right, #2b5876, #4e4376);
-$gradient4: linear-gradient(to right, #799f0c, #acbb78);
-$gradient5: linear-gradient(to right, #aa4b6b, #6b6b83, #3b8d99);
-$gradient6: linear-gradient(to right, #c31432, #240b36);
-$gradient7: linear-gradient(to right, #26A0C6, #355c7d);
-$gradient8: linear-gradient(to right, #dd5e89, #f7bb97);
-$gradient9: linear-gradient(to right, #eacda3, #d6ae7b);
-$gradient10: linear-gradient(to right, #d66d75, #e29587);
-$gradient11: linear-gradient(to right, #aa076b, #61045f);
+$gradient0: #c04848, #480048;
+$gradient1: #4389a2, #4389a2;
+$gradient2: #314755, #26a0da;
+$gradient3: #2b5876, #4e4376;
+$gradient4: #799f0c, #acbb78;
+$gradient5: #aa4b6b, #6b6b83, #3b8d99;
+$gradient6: #c31432, #240b36;
+$gradient7: #26A0C6, #355c7d;
+$gradient8: #dd5e89, #f7bb97;
+$gradient9: #eacda3, #d6ae7b;
+$gradient10: #d66d75, #e29587;
+$gradient11: #aa076b, #61045f;
 
 // THE SPACES
 $basic-padding: 12px;
