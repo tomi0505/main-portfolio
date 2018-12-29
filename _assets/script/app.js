@@ -5,6 +5,7 @@ import changeTabsContentOnIcons from './modules/tab/changeTabsContentOnIcons.js'
 import {saveOriginalValues} from './modules/tab/changeTabsContentOnIcons.js';
 import hideInactiveProjectsLink from './modules/portfolio/hideInactiveProjectsLink.js';
 import {getCookie} from './modules/cookie/cookie.js';
+import cookieAlert from './modules/cookie/cookieAlert.js';
 
 document.addEventListener("DOMContentLoaded", function() {
 	let mainChilds = document.querySelector(".portfolio__main").children;
@@ -25,6 +26,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	saveOriginalValues(domElements);
 	changeTabsContentOnIcons(domElements);
 	hideInactiveProjectsLink();
+	cookieAlert();
 
 	window.addEventListener("resize", function() {
 		changeTabsContentOnIcons(domElements);

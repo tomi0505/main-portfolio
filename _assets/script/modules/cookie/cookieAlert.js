@@ -3,6 +3,7 @@ const cookieAlert = function() {
 
 	acceptBtn.addEventListener("click", function(e) {
 		e.preventDefault();
+		document.cookie = `cookieAlert=true; path=/`;
 	}, false);
 }
 
