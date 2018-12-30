@@ -26,7 +26,13 @@ document.addEventListener("DOMContentLoaded", function() {
 	saveOriginalValues(domElements);
 	changeTabsContentOnIcons(domElements);
 	hideInactiveProjectsLink();
-	cookieAlert();
+
+	if(getCookie("cookieAlert")) {
+		const cookieAlert = document.querySelector(".cookie-alert");
+		cookieAlert.classList.add("hidden");
+	} else {
+		cookieAlert();
+	}
 
 	window.addEventListener("resize", function() {
 		changeTabsContentOnIcons(domElements);
