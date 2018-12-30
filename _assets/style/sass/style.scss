@@ -335,13 +335,17 @@ body {
 }
 
 .cookie-alert {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
+  padding: $basic-padding;
+  position: fixed;
+  left: 10px;
+  bottom: 10px;
+  width: 250px;
   @include flex();
+  flex-direction: column;
   font-size: 0.8rem;
-  background-color: #FFFF33;
+  border-radius: 5px;
+  box-shadow: 1px 1px 7px lighten($black, 55);
+  background-color: rgba(#FFFF33, .9);
   z-index: 999;
 
   &__information {
@@ -351,11 +355,16 @@ body {
 
   &__accept {
     margin: 12px;
+    padding: 5px 8px;
     @include reset(a);
+    color: $black;
+    border-radius: 4px;
+    background-color: $white;
   }
 
   &__escape {
-    @include reset(a);
+    @extend .cookie-alert__accept;
+    margin: 0;
   }
 }
 
