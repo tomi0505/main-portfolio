@@ -348,6 +348,11 @@ body {
   background-color: rgba(#FFFF33, .9);
   z-index: 999;
 
+  @include rwd(phone) {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
   &__information {
     margin: 0;
     font-weight: normal;
