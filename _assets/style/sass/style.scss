@@ -3,6 +3,7 @@
 @import 'mixin.scss';
 @import 'basic.scss';
 @import 'helpers.scss';
+@import 'keyframes.scss';
 
 html {
   @include rwd(medium) {
@@ -80,6 +81,11 @@ body {
 
   &__full-name {
     letter-spacing: 1px;
+    animation: moveFullName 1.8s ease-out;
+
+    &--stopAnimation {
+      animation: none;
+    }
   }
 
   &__subtitle {
@@ -87,6 +93,12 @@ body {
     display: block;
     font-size: 1.1rem;
     color: rgba($black, .8);
+    animation: moveSubtitle .6s ease-out 1.8s;
+    animation-fill-mode: backwards;
+
+    &--stopAnimation {
+      animation: none;
+    }
   }
 
   &__about-me {
@@ -324,27 +336,15 @@ body {
   width: 90px;
   border-radius: 50%;
   animation-name: moveSelfPhoto;
-  animation-duration: 2s;
+  animation-duration: 1.8s;
   animation-timing-function: ease-out;
+
+  &--stopAnimation {
+    animation: none;
+  }
 
   @include rwd(medium) {
     width: 80px;
-  }
-}
-
-@keyframes moveSelfPhoto {
-  0% {
-    transform: translateX(-150px) rotate(-360deg);
-    opacity: .2;
-  }
-
-  80% {
-    transform: translateX(25px) rotate(25deg);
-  }
-
-  100% {
-    transform: translateX(0) rotate(0);
-    opacity: 1;
   }
 }
 
@@ -394,9 +394,4 @@ body {
     @extend .cookie-alert__accept;
     margin: 0;
   }
-}
-
-@keyframes changePreloaderBgColor {
-  0% {transform: scale(.3);}
-  100% {transform: scale(1);}
 }
