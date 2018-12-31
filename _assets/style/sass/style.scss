@@ -85,9 +85,8 @@ body {
   &__subtitle {
     margin-top: 8px;
     display: block;
-    font-size: 1.2rem;
-    font-style: italic;
-    opacity: .7;
+    font-size: 1.1rem;
+    color: rgba($black, .8);
   }
 
   &__about-me {
@@ -344,8 +343,8 @@ body {
   flex-direction: column;
   font-size: 0.8rem;
   border-radius: 5px;
-  box-shadow: 1px 1px 7px lighten($black, 55);
-  background-color: rgba(#FFFF33, .9);
+  box-shadow: 1px 1px 1px $black;
+  background-color: rgba(#d6c57b, .9);
   z-index: 999;
 
   @include rwd(phone) {
@@ -364,7 +363,12 @@ body {
     @include reset(a);
     color: $black;
     border-radius: 4px;
-    background-color: $white;
+    background-color: #7bbfd6;
+    transition: background-color .2s;
+
+    &:hover {
+      background-color: lighten(#7bbfd6, 10);
+    }
   }
 
   &__escape {
