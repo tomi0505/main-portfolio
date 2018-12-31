@@ -323,9 +323,28 @@ body {
   display: block;
   width: 90px;
   border-radius: 50%;
+  animation-name: moveSelfPhoto;
+  animation-duration: 2s;
+  animation-timing-function: ease-out;
 
   @include rwd(medium) {
     width: 80px;
+  }
+}
+
+@keyframes moveSelfPhoto {
+  0% {
+    transform: translateX(-150px) rotate(-360deg);
+    opacity: .2;
+  }
+
+  80% {
+    transform: translateX(25px) rotate(25deg);
+  }
+
+  100% {
+    transform: translateX(0) rotate(0);
+    opacity: 1;
   }
 }
 
