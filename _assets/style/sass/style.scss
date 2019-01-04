@@ -355,6 +355,26 @@ body {
   &__email {
     @include reset(a);
     color: $black;
+
+    &:hover {
+      .contact-data__email-simple {
+        &::after {
+          content: "";
+          display: block;
+          width: 100%;
+          height: 1px;
+          background-color: $black;
+        }
+      }
+    }
+  }
+
+  &__email-simple {
+    &::after {
+      content: "";
+      width: 0%;
+      transition: width .2s;
+    }
   }
 }
 
