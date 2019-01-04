@@ -3,6 +3,7 @@
 @import 'mixin.scss';
 @import 'basic.scss';
 @import 'helpers.scss';
+@import 'keyframes.scss';
 
 html {
   @include rwd(medium) {
@@ -80,14 +81,24 @@ body {
 
   &__full-name {
     letter-spacing: 1px;
+    animation: moveFullName 1.8s ease-out;
+
+    &--stopAnimation {
+      animation: none;
+    }
   }
 
   &__subtitle {
     margin-top: 8px;
     display: block;
-    font-size: 1.2rem;
-    font-style: italic;
-    opacity: .7;
+    font-size: 1.1rem;
+    color: rgba($black, .8);
+    animation: moveSubtitle .6s ease-out 1.8s;
+    animation-fill-mode: backwards;
+
+    &--stopAnimation {
+      animation: none;
+    }
   }
 
   &__about-me {
@@ -324,6 +335,13 @@ body {
   display: block;
   width: 90px;
   border-radius: 50%;
+  animation-name: moveSelfPhoto;
+  animation-duration: 1.8s;
+  animation-timing-function: ease-out;
+
+  &--stopAnimation {
+    animation: none;
+  }
 
   @include rwd(medium) {
     width: 80px;
@@ -344,8 +362,8 @@ body {
   flex-direction: column;
   font-size: 0.8rem;
   border-radius: 5px;
-  box-shadow: 1px 1px 7px lighten($black, 55);
-  background-color: rgba(#FFFF33, .9);
+  box-shadow: 1px 1px 1px $black;
+  background-color: rgba(#d6c57b, .9);
   z-index: 999;
 
   @include rwd(phone) {
@@ -364,16 +382,16 @@ body {
     @include reset(a);
     color: $black;
     border-radius: 4px;
-    background-color: $white;
+    background-color: #7bbfd6;
+    transition: background-color .2s;
+
+    &:hover {
+      background-color: lighten(#7bbfd6, 10);
+    }
   }
 
   &__escape {
     @extend .cookie-alert__accept;
     margin: 0;
   }
-}
-
-@keyframes changePreloaderBgColor {
-  0% {transform: scale(.3);}
-  100% {transform: scale(1);}
 }
