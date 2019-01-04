@@ -351,6 +351,11 @@ body {
 
 .contact-data {
   font-style: normal;
+
+  &__email {
+    @include reset(a);
+    color: $black;
+  }
 }
 
 .cookie-alert {
