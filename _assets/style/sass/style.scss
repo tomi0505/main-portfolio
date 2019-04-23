@@ -22,6 +22,11 @@ body {
   background-image: linear-gradient(to right, $gradient9);
   overflow: auto;
 
+  &.loading {
+    overflow: hidden;
+    height: 100%;
+  }
+
   @include rwd(medium) {
     padding: 0;
   }
@@ -220,7 +225,7 @@ body {
 }
 
 .preloader {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   @include flex();

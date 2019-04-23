@@ -37,9 +37,12 @@ document.addEventListener("DOMContentLoaded", function() {
 
 	animationFinish();
 
+	changeTabsContentOnIcons(domElements);
+	
 	window.addEventListener("resize", function() {
 		changeTabsContentOnIcons(domElements);
 	}, false);
 
 	preloader.classList.add("hidden");
+	document.body.classList.remove("loading");
 }, false);

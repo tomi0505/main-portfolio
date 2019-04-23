@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?7afi68');
-  src:  url('fonts/icomoon.eot?7afi68#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?7afi68') format('truetype'),
-    url('fonts/icomoon.woff?7afi68') format('woff'),
-    url('fonts/icomoon.svg?7afi68#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?9ptm0i');
+  src:  url('fonts/icomoon.eot?9ptm0i#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?9ptm0i') format('truetype'),
+    url('fonts/icomoon.woff?9ptm0i') format('woff'),
+    url('fonts/icomoon.svg?9ptm0i#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -24,6 +24,45 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-bem:before {
+  content: "\e909";
+}
+.icon-linkedin1:before {
+  content: "\e908";
+  color: #0077b5;
+}
+.icon-html5:before {
+  content: "\e907";
+  color: #e34f26;
+}
+.icon-css3:before {
+  content: "\e906";
+  color: #1572b6;
+}
+.icon-gulp:before {
+  content: "\e901";
+  color: #da4648;
+}
+.icon-git:before {
+  content: "\e902";
+  color: #f05032;
+}
+.icon-sass:before {
+  content: "\e903";
+  color: #c69;
+}
+.icon-adobephotoshop:before {
+  content: "\e904";
+  color: #00c8ff;
+}
+.icon-javascript:before {
+  content: "\e905";
+  color: #f7df1e;
+}
+.icon-webpack:before {
+  content: "\e923";
+  color: #8dd6f9;
+}
 .icon-mail-envelope-closed:before {
   content: "\e90a";
 }
@@ -126,6 +165,15 @@
 .icon-device:before {
   content: "\e900";
 }
+.icon-envelope3:before {
+  content: "\e919";
+}
+.icon-portfolio:before {
+  content: "\e91a";
+}
+.icon-user-solid-circle:before {
+  content: "\e91b";
+}
 .icon-at:before {
   content: "\e922";
 }
@@ -204,15 +252,6 @@
 .icon-git1:before {
   content: "\eae7";
 }
-.icon-envelope3:before {
-  content: "\e919";
-}
-.icon-portfolio:before {
-  content: "\e91a";
-}
-.icon-user-solid-circle:before {
-  content: "\e91b";
-}
 .icon-envelope-open:before {
   content: "\e91c";
 }
@@ -230,39 +269,4 @@
 }
 .icon-home:before {
   content: "\e921";
-}
-.icon-bem:before {
-  content: "\e909";
-}
-.icon-linkedin1:before {
-  content: "\e908";
-  color: #0077b5;
-}
-.icon-html5:before {
-  content: "\e907";
-  color: #e34f26;
-}
-.icon-css3:before {
-  content: "\e906";
-  color: #1572b6;
-}
-.icon-gulp:before {
-  content: "\e901";
-  color: #da4648;
-}
-.icon-git:before {
-  content: "\e902";
-  color: #f05032;
-}
-.icon-sass:before {
-  content: "\e903";
-  color: #c69;
-}
-.icon-adobephotoshop:before {
-  content: "\e904";
-  color: #00c8ff;
-}
-.icon-javascript:before {
-  content: "\e905";
-  color: #f7df1e;
 }
