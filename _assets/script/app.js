@@ -4,8 +4,6 @@ import navTabKey from './modules/tab/navTabKey.js';
 import changeTabsContentOnIcons from './modules/tab/changeTabsContentOnIcons.js';
 import {saveOriginalValues} from './modules/tab/changeTabsContentOnIcons.js';
 import hideInactiveProjectsLink from './modules/portfolio/hideInactiveProjectsLink.js';
-import {getCookie} from './modules/cookie/cookie.js';
-import cookieAlert from './modules/cookie/cookieAlert.js';
 import animationFinish from './modules/animations/keyframes.js';
 
 document.addEventListener("DOMContentLoaded", function() {
@@ -21,19 +19,12 @@ document.addEventListener("DOMContentLoaded", function() {
 		mainChilds
 	};
 
-	navTab(domElements, getCookie("activeTab"));
+	navTab(domElements, 0);
 	selectTab(domElements);
 	navTabKey(domElements);
 	saveOriginalValues(domElements);
 	changeTabsContentOnIcons(domElements);
 	hideInactiveProjectsLink();
-
-	if(getCookie("cookieAlert")) {
-		const cookieAlert = document.querySelector(".cookie-alert");
-		cookieAlert.classList.add("hidden");
-	} else {
-		cookieAlert();
-	}
 
 	animationFinish();
 

@@ -1,7 +1,6 @@
 import navTab from './navTab.js';
-import {getCookie} from '../cookie/cookie.js';
 
-let activeTabNr = getCookie("activeTab");
+let activeTabNr = 0;
 
 const activeTabs = function(domElements) {
   let activeTabIndex;

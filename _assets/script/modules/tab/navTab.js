@@ -1,5 +1,3 @@
-import setCookie from '../cookie/cookie.js';
-
 const navTab = function(domElements, visibleSection) {
 	domElements.mainChilds.forEach((sections, i) => {
 	  if (i !== visibleSection) {
@@ -8,7 +6,6 @@ const navTab = function(domElements, visibleSection) {
 	    sections.classList.remove("hidden");
 	  }
 	});
-	setCookie(visibleSection);
 }
 
 export default navTab;
