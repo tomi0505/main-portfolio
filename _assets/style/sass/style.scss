@@ -161,6 +161,11 @@ body {
     margin-left: 0;
     margin-right: 0;
     min-width: 150px;
+
+    &--bootstrap-icon {
+      position: relative;
+      top: 1px;
+    }
   }
 
   &__skills-description {
@@ -168,6 +173,7 @@ body {
   }
 
   &__projects {
+    margin: 16px 0;
     padding-bottom: 10px;
     justify-content: flex-start;
     max-width: 870px+$scrollBarWidth;
