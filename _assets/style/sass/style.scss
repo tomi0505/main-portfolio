@@ -117,8 +117,8 @@ body {
   }
 
   &__skills {
+    padding: 16px 0;
     max-width: 600px+$scrollBarWidth;
-    max-height: 354px;
     justify-content: flex-start;
     overflow: auto;
 
@@ -143,6 +143,18 @@ body {
     .icon {
       font-size: 3.3em;
     }
+  }
+
+  &__skills-regular,
+  &__skills-basic {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__basic-skills-title {
+    width: 100%;
+    font-size: 0.9rem;
+    font-weight: normal;
   }
 
   &__skills-simple {
