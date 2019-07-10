@@ -1,6 +1,10 @@
 const originalValues = [];
-const newValuseWithIcon = ['home1', 'user1', 'tools', 'suitcase1', 'contact5'];
-const originTemplate = '<i class="icon-{{icon-name}} icon"></i>';
+const newValuseWithIcon = ['home1', 'user1', 'tools', 'suitcase1', 'envelope5'];
+const originTemplate = `
+  <svg class="icon icon-{{icon-name}}">
+    <use xlink:href="#icon-{{icon-name}}"></use>
+  </svg>
+`;
 
 const rwd = window.matchMedia("(max-width: 768px)");
 
@@ -13,7 +17,7 @@ const saveOriginalValues = function(domElements) {
 const changeTabsContentOnIcons = function(domElements) {
   if (rwd.matches) {
     domElements.menu.forEach((li, i)=> {
-      const newString = originTemplate.replace('{{icon-name}}', newValuseWithIcon[i]);
+      const newString = originTemplate.replace(/{{icon-name}}/g, newValuseWithIcon[i]);
       li.innerHTML = newString;
     });
   } else {

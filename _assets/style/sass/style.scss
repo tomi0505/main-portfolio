@@ -346,10 +346,14 @@ body {
       border-bottom-color: $white;
     }
 
+    & > .icon {
+      margin-top: 6px;
+      display: inline-block;
+    }
+
     &--marginTopCentering {
-      .icon {
+      & > .icon {
         margin-top: 7px;
-        display: inline-block;
       }
     }
   }
